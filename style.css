@@ -1,0 +1,193 @@
+
+* 
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body 
+{
+    margin: 0;
+    min-height: 100vh;
+    background-color: #e4c1f9;
+}
+
+h1 
+{
+    color: white;
+    font-size: x-large;
+    text-align: center;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.35);
+    padding: 24px;
+}
+
+h2
+{
+    color: white;
+    font-size: large;
+    text-align: center;
+    font-style: italic;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.35);
+    padding: 24px;
+}
+
+h3
+{
+    color: white;
+    font-size: medium;
+    text-align: center;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.35);
+    padding: 16px;
+}
+
+.add-task 
+{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+    gap: 10px;
+}
+
+.add-task input 
+{
+    width: 300px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.add-task input:focus 
+{
+    border: 1px solid #b388eb;
+}
+
+.add-task button 
+{
+    padding: 10px 20px;
+    background: #b388eb;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-task button:hover 
+{
+    background: #945bdf;
+}
+
+.board 
+{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.column
+{
+    width: 300px;
+    min-height: 500px;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,.1);
+}
+
+.todo
+{
+    background: #ff99c8;
+}
+
+.todo h3
+{
+    background: #f15bb5;
+}
+    
+.current
+{
+    background: #fcf6bd;
+}
+
+.current h3
+{
+    background: #f9c74f;
+}
+
+.progress
+{
+    background: #a9def9;
+}
+
+.progress h3
+{
+    background: #48cae4;
+}
+
+.done
+{
+    background: #d0f4de;
+}
+
+.done
+{
+    background: #80ed99;
+}
+
+.column h3
+{
+    text-align: center;
+    background: rgba(0,0,0,0.05);
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    margin: -15px -15px 15px -15px;
+}
+
+.task-list 
+{
+    min-height: 420px;
+}
+
+.task 
+{
+    background: white;
+    border-left: 5px solid #e4c1f9;
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 6px;
+    cursor: move;
+    box-shadow: 0 2px 6px rgba(0,0,0,.15);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task:hover 
+{
+    transform: scale(1.02);
+}
+
+.delete 
+{
+    background: #edede9;
+    color: black;
+    border: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.delete:hover 
+{
+    background: #c2c2c2;
+}
+
+.completed span 
+{
+    text-decoration: line-through;
+    opacity: 0.7;
+}

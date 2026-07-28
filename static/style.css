@@ -1,0 +1,238 @@
+* 
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body
+{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+    url('../static/background.png');
+    margin: 0;
+    min-height: 100vh;
+    background-size: cover;        /* Filling screen */
+    background-position: center;   /* Image centred */
+    background-attachment: fixed;
+    background-repeat: no-repeat;  /* No tiling */
+    text-align: center;
+}
+
+h1 
+{
+    font-size: 36px;
+    text-align: center;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.35);
+    padding: 24px;
+    color: white;
+}
+
+h2
+{
+    font-size: 22px;
+    text-align: center;
+    font-style: italic;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.35);
+    padding: 24px;
+    color: white;
+}
+
+h3
+{
+    font-size: 18px;
+    text-align: center;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.35);
+    padding: 16px;
+    color: white;
+}
+
+.add-task 
+{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+    gap: 20px;
+}
+
+.add-task input 
+{
+    width: 300px;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+.add-task input:focus 
+{
+    border: 1px solid #00ccff;
+    outline: none;
+    border: 2px solid #00ccff;
+    box-shadow: 0 0 12px #00ccff;
+}
+
+.add-task button 
+{
+    padding: 10px 20px;
+    font-size: 14px;
+    background: #00a6ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-task button:hover 
+{
+    background: #00a6ff;
+    transform: scale(1.04);
+}
+
+.add-task input::placeholder
+{
+    font-size: 14px;
+    color: #999;
+}
+
+.board 
+{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.column
+{
+    width: 300px;
+    min-height: 500px;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,.1);
+}
+
+.todo
+{
+    background: #ff99c8;
+}
+
+.todo h3
+{
+    background: #f15bb5;
+}
+    
+.current
+{
+    background: #fcf6bd;
+}
+
+.current h3
+{
+    background: #ffe066;
+}
+
+.progress
+{
+    background: #a9def9;
+}
+
+.progress h3
+{
+    background: #48cae4;
+}
+
+.done
+{
+    background: #d0f4de;
+}
+
+.done h3
+{
+    background: #80ed99;
+}
+
+.column h3
+{
+    text-align: center;
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    margin: -15px -15px 15px -15px;
+}
+
+.task-list 
+{
+    min-height: 420px;
+}
+
+.task 
+{
+    background: white;
+    padding: 0;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    border-color:rgba(0,0,0,0.5);
+    cursor: move;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+    display: flex;
+    align-items: stretch;
+    overflow: hidden; 
+}
+
+.task:hover 
+{
+    transform: translateY(-3px) scale(1.02);
+    box-shadow:
+        0 8px 18px rgba(0,0,0,.18);
+}
+
+.task-colour
+{
+    width: 16px;
+    align-self: stretch;
+    cursor: pointer;
+    background:	#baffc9;
+    border-right: 0.5px rgba(0,0,0,0.1);
+    transition: width 0.2s;
+    flex-shrink: 0;
+}
+
+.task-colour:hover
+{
+    width: 18px;
+}
+
+.task-content
+{
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 12px;
+}
+
+.delete 
+{
+    background: #edede9;
+    color: black;
+    border: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.delete:hover 
+{
+    background: #c2c2c2;
+}
+
+.completed span 
+{
+    text-decoration: line-through;
+    transition: opacity 0.3s ease;
+    opacity: 0.7;
+    color: #666
+}

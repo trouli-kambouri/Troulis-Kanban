@@ -1,0 +1,28 @@
+<!--
+<html>
+    <head>
+        <title>Sign Up Page!</title>
+        <link rel="stylesheet" href="/static/style.css">
+    </head>
+    <body>
+        {% include "nav_bar.html" %} Adds navigation bar 
+        <main>
+            <h1>Sign Up Page</h1>
+
+            <form method="POST" action="/register">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="text" name="password" placeholder="Your Password" required>
+
+                <button type="submit">Sign Up</button>            
+            </form>
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                    {% if messages %}
+                        {% for category, message in messages %}
+                            <div class="flash-message {{ category }}">
+                                {{ message }}
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+        </main>
+    -->
