@@ -1,4 +1,4 @@
-# Simple Kanban Web Application
+# Trouli's Kanban
 
 This web application is a small personal project, written in HTML, CSS and JavaScript.
 
