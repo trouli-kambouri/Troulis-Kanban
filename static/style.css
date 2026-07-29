@@ -23,6 +23,7 @@ h1
 {
     font-size: 36px;
     text-align: center;
+    font-style: italic;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.35);
     padding: 24px;
     color: white;
@@ -186,22 +187,6 @@ h3
     transform: translateY(-3px) scale(1.02);
     box-shadow:
         0 8px 18px rgba(0,0,0,.18);
-}
-
-.task-colour
-{
-    width: 16px;
-    align-self: stretch;
-    cursor: pointer;
-    background:	#baffc9;
-    border-right: 0.5px rgba(0,0,0,0.1);
-    transition: width 0.2s;
-    flex-shrink: 0;
-}
-
-.task-colour:hover
-{
-    width: 18px;
 }
 
 .task-content

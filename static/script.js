@@ -20,13 +20,6 @@ function loadTasks()
     {
         taskId = parseInt(savedId);
     }
-    tasks.forEach(task => 
-    {
-        if (!task.colour) 
-        {
-            task.colour = "#baffc9";
-        }
-    });
     renderBoard();
 }
 
@@ -143,22 +136,6 @@ function drop(e)
         const insertIndex = before ? targetIndex : targetIndex + 1;
         tasks.splice(insertIndex, 0, draggedTask);
     }
-    saveTasks();
-    renderBoard();
-}
-function changeTaskColour(id) 
-{
-    const task = tasks.find(t => t.id === id);
-    if (!task) return;
-    const colours = 
-    [
-        "#baffc9",
-        "#ffffba",
-        "#ffb3ba"
-    ];
-    let index = colours.indexOf(task.colour);
-    if (index === -1) index = 0;
-    task.colour = colours[(index + 1) % colours.length];
     saveTasks();
     renderBoard();
 }
