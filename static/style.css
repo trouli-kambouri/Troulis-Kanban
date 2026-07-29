@@ -8,7 +8,7 @@
 
 body
 {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
     url('../static/background.png');
     margin: 0;
     min-height: 100vh;
@@ -115,36 +115,44 @@ h3
     box-shadow: 0 3px 10px rgba(0,0,0,.1);
 }
 
-.todo {
-    background: #F8E3F2;
+.todo
+{
+    background: #F9E4FF;
 }
 
-.todo h3 {
-    background: #EDC7E4;
+.todo h3
+{
+    background: #EBC7FF;
 }
 
-.current {
-    background: #FFF7E8;
+.current
+{
+    background: #FFE6F3;
 }
 
-.current h3 {
-    background: #FCEBCF;
+.current h3
+{
+    background: #FFCFE8;
 }
 
-.progress {
-    background: #EAF3FF;
+.progress
+{
+    background: #F1E8FF;
 }
 
-.progress h3 {
-    background: #D7E8FF;
+.progress h3
+{
+    background: #DCC5FF;
 }
 
-.done {
-    background: #F1F8F3;
+.done
+{
+    background: #EAE8FF;
 }
 
-.done h3 {
-    background: #DCEFE2;
+.done h3
+{
+    background: #CEC8FF;
 }
 
 .column h3
