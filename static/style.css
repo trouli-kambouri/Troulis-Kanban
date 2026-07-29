@@ -21,7 +21,7 @@ h1
 {
     font-size: 26px;
     text-align: center;
-    text-shadow: 1px 1px 3px #d586ff(0,0,0,0.5), rgba(0,0,0,0.5);
+    text-shadow: 1px 1px 5px #d586ff(0,0,0,0.5);
     padding: 30px;
     margin-bottom: 60px;
     margin-top: 15px;
@@ -61,14 +61,14 @@ h3
     padding: 10px;
     font-size: 14px;
     border-radius: 10px;
-    border: 1px solid #E0B0FF;
+    border: 1px solid #d586ff;
 }
 
 .add-task input:focus 
 {
-    border: 2px solid #E0B0FF;
+    border: 2px solid #d586ff;
     outline: none;
-    box-shadow: 0 0 14px #E0B0FF;
+    box-shadow: 0 0 14px #d586ff;
 }
 
 .add-task button 
@@ -109,7 +109,7 @@ h3
     min-height: 500px;
     border-radius: 10px;
     padding: 15px;
-    box-shadow: 0 3px 10px rgba(0,0,0,.1);
+    box-shadow: 0 3px 10px rgba(0,0,0,.2);
 }
 
 .todo
@@ -169,12 +169,13 @@ h3
 .task 
 {
     background: white;
+    color: #1d1d1d;
     padding: 0;
     margin-bottom: 12px;
     border-radius: 8px;
-    border-color:rgba(0,0,0,0.5);
+    border-color:rgba(0,0,0,0.2);
     cursor: move;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.4);
     display: flex;
     align-items: stretch;
     overflow: hidden; 
