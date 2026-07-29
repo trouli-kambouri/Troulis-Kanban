@@ -10,10 +10,12 @@ body{
     url('../static/background.png');
     margin: 0;
     min-height: 100vh;
-    background-size: cover;        /* Filling screen */
-    background-position: center;   /* Image centred */
+    background-size: cover;       
+    background-position: center; 
     background-attachment: fixed;
-    background-repeat: no-repeat;  /* No tiling */
+    background-repeat: no-repeat;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
     text-align: center;
 }
 
