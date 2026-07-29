@@ -117,42 +117,42 @@ h3
 
 .todo
 {
-    background: #F9E4FF;
+    background: #eda7ff;
 }
 
 .todo h3
 {
-    background: #EBC7FF;
+    background: #d586ff;
 }
 
 .current
 {
-    background: #FFE6F3;
+    background: #ffbaea;
 }
 
 .current h3
 {
-    background: #FFCFE8;
+    background: #ff9edf;
 }
 
 .progress
 {
-    background: #F1E8FF;
+    background: #d5adff;
 }
 
 .progress h3
 {
-    background: #DCC5FF;
+    background: #c29aff;
 }
 
 .done
 {
-    background: #EAE8FF;
+    background: #cee1ff;
 }
 
 .done h3
 {
-    background: #CEC8FF;
+    background: #82b8ff;
 }
 
 .column h3
