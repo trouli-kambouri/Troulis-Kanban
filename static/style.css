@@ -42,7 +42,7 @@ h2
 
 h3
 {
-    font-size: 14px;
+    font-size: 18px;
     text-align: center;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.35);
     padding: 16px;
@@ -76,7 +76,7 @@ h3
 .add-task button 
 {
     padding: 10px 20px;
-    font-size: 14px;
+    font-size: 16px;
     background: #ca69ff;
     color: white;
     border: none;
@@ -116,7 +116,7 @@ h3
 
 .todo
 {
-    background: #d5adff;
+    background: #bf84ff;
 }
 
 .todo h3
