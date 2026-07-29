@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: serif;
+    font-family: Georgia, serif;
 }
 
 body
@@ -70,10 +70,9 @@ h3
 
 .add-task input:focus 
 {
-    border: 1px solid #E0B0FF;
+    border: 2px solid #E0B0FF;
     outline: none;
-    border: 4px solid #E0B0FF;
-    box-shadow: 0 0 16px #E0B0FF;
+    box-shadow: 0 0 14px #E0B0FF;
 }
 
 .add-task button 
