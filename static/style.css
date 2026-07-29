@@ -115,44 +115,36 @@ h3
     box-shadow: 0 3px 10px rgba(0,0,0,.1);
 }
 
-.todo
-{
-    background: #ff99c8;
+.todo {
+    background: #F8E3F2;
 }
 
-.todo h3
-{
-    background: #f15bb5;
-}
-    
-.current
-{
-    background: #fcf6bd;
+.todo h3 {
+    background: #EDC7E4;
 }
 
-.current h3
-{
-    background: #ffe066;
+.current {
+    background: #FFF7E8;
 }
 
-.progress
-{
-    background: #a9def9;
+.current h3 {
+    background: #FCEBCF;
 }
 
-.progress h3
-{
-    background: #48cae4;
+.progress {
+    background: #EAF3FF;
 }
 
-.done
-{
-    background: #d0f4de;
+.progress h3 {
+    background: #D7E8FF;
 }
 
-.done h3
-{
-    background: #80ed99;
+.done {
+    background: #F1F8F3;
+}
+
+.done h3 {
+    background: #DCEFE2;
 }
 
 .column h3
