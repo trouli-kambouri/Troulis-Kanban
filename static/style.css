@@ -75,7 +75,7 @@ h3
 {
     padding: 10px 20px;
     font-size: 14px;
-    background: #d586ff;
+    background: #ca69ff;
     color: white;
     border: none;
     border-radius: 5px;
@@ -84,7 +84,7 @@ h3
 
 .add-task button:hover 
 {
-    background: #ca69ff;
+    background: #c14eff;
     transform: scale(1.02);
 }
 
@@ -174,6 +174,7 @@ h3
     margin-bottom: 12px;
     border-radius: 8px;
     border-color:rgba(0,0,0,0.2);
+    border-left: 6px #c14eff;
     cursor: move;
     box-shadow: 0 2px 6px rgba(0,0,0,0.4);
     display: flex;
