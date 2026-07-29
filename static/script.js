@@ -170,5 +170,3 @@ document.getElementById("addtask").addEventListener("keypress", function(e)
     }
 });
 loadTasks();
-
-alert("Hello Mummy! You're the Best! - Trouli")
