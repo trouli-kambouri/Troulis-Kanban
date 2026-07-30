@@ -185,6 +185,7 @@ h3
     display: flex;
     align-items: stretch;
     overflow: hidden; 
+    overflow-wrap: break-word;
 }
 
 .task:hover 
@@ -197,7 +198,6 @@ h3
 .task-content
 {
     flex: 1;
-    display: flex;
     justify-content: space-between;
     padding: 12px;
 }
@@ -211,6 +211,7 @@ h3
     height: 25px;
     border-radius: 50%;
     cursor: pointer;
+    flex-shrink: 0;
 }
 
 .delete:hover 
