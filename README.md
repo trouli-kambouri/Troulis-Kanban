@@ -11,4 +11,4 @@ The web application is intended to be a functioning Kanban board, with the follo
 - [x] Saves tasks locally
 
 To Do:
-- Insert a "Tasks Done: X" line which prints the tasks in the Done column.
+- [ ] Insert a "Tasks Done: X" line which prints the number of tasks in the Done column.
