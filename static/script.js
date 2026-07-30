@@ -58,11 +58,19 @@ function renderBoard()
     increaseCounter();
 }
 
-function increaseCounter() {
+function increaseCounter() 
+{
     const counter = tasks.filter(task => task.column === "done").length;
-
-    document.getElementById("counttasks").textContent =
-        `You have completed ${counter} tasks!`;
+    
+    if (counter === 1)
+        {
+            document.getElementById("counttasks").textContent =`You have completed ${counter} task!`;
+        }
+    else
+        {
+        document.getElementById("counttasks").textContent =`You have completed ${counter} tasks!`;
+    }
+        
 }
 
 function addTask() 
