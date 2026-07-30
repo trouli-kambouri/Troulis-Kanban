@@ -9,6 +9,4 @@ The web application is intended to be a functioning Kanban board, with the follo
 - [x] Drag and Drop a Task
 - [x] Grey out and strikethrough "Done" Tasks
 - [x] Saves tasks locally
-
-To Do:
-- [ ] Insert a "Tasks Done: X" line which prints the number of tasks in the Done column
+- [x] Prints number of tasks done
