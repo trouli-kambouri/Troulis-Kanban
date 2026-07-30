@@ -70,7 +70,6 @@ function increaseCounter()
         {
         document.getElementById("counttasks").textContent =`You have completed ${counter} tasks!`;
     }
-        
 }
 
 function addTask() 
