@@ -128,7 +128,7 @@ h3
 
 .todo
 {
-    background: #c58fff;
+    background: #cfa2ff;
 }
 
 .todo h3
@@ -158,12 +158,12 @@ h3
 
 .done
 {
-    background: #9797ff;
+    background: #acacff;
 }
 
 .done h3
 {
-    background: #8f73ff;
+    background: #7070ff;
 }
 
 .task-list 
@@ -183,8 +183,6 @@ h3
     cursor: move;
     box-shadow: 0 2px 4px rgba(0,0,0,0.3);
     display: flex;
-    align-items: stretch;
-    overflow: hidden; 
     overflow-wrap: break-word;
 }
 
