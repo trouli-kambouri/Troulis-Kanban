@@ -61,15 +61,14 @@ function renderBoard()
 function increaseCounter() 
 {
     const counter = tasks.filter(task => task.column === "done").length;
-    
-    if (counter === 1)
-        {
-            document.getElementById("counttasks").textContent =`You have completed ${counter} task!`;
-        }
-    else
-        {
-        document.getElementById("counttasks").textContent =`You have completed ${counter} tasks!`;
+    let text;
+    if (counter === 1){
+        text = "You have completed ${counter} task today!";
     }
+    else {
+        text = "You have completed ${counter} tasks today!";
+    }
+    document.getElementById("counttasks").textContent =`You have completed ${counter} tasks!` = text;
 }
 
 function addTask() 
