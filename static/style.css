@@ -114,6 +114,16 @@ h3
     box-shadow: 0 3px 10px rgba(0,0,0,.2);
 }
 
+.column h3
+{
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    padding: 12px;
+    border-radius: 8px;
+    margin: -15px -15px 15px -15px;
+}
+
 .todo
 {
     background: #bf84ff;
@@ -154,15 +164,6 @@ h3
     background: #8570fb;
 }
 
-.column h3
-{
-    text-align: center;
-    color: white;
-    padding: 12px;
-    border-radius: 8px;
-    margin: -15px -15px 15px -15px;
-}
-
 .task-list 
 {
     min-height: 420px;
@@ -196,7 +197,6 @@ h3
     flex: 1;
     display: flex;
     justify-content: space-between;
-    align-items: stretch;
     padding: 12px;
 }
 
