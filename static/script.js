@@ -40,7 +40,6 @@ function renderBoard()
 
         if (task.column === "done") {
             taskElement.classList.add("completed");
-            task.getElementById("counttasks") = increaseCounter();
         }
         taskElement.addEventListener("dragstart", drag);
 
@@ -56,12 +55,14 @@ function renderBoard()
             column.appendChild(taskElement);
         }
     });
+    increaseCounter();
 }
 
-function increaseCounter()
-{
-    for (tasks in done (counter = counter++));
-    task.getElementById("counttasks").textContent = "You have completed" + counter + "tasks!";
+function increaseCounter() {
+    const counter = tasks.filter(task => task.column === "done").length;
+
+    document.getElementById("counttasks").textContent =
+        `You have completed ${counter} tasks!`;
 }
 
 function addTask() 
