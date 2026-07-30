@@ -51,9 +51,6 @@ function renderBoard()
                 <button class="delete" onclick="deleteTask(${task.id})">×</button>
             </div>
         `;
-        const colourStrip = taskElement.querySelector(".task-colour");
-        colourStrip.style.backgroundColor = task.colour;
-        document.getElementById(task.column).appendChild(taskElement);
     });
 }
 
@@ -67,7 +64,6 @@ function addTask()
         id: taskId++,
         text: text,
         column: "todo",
-        colour: "#baffc9"
     });
 
     input.value = "";
