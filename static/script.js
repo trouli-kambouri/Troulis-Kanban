@@ -49,6 +49,11 @@ function renderBoard()
                 <button class="delete" onclick="deleteTask(${task.id})">×</button>
             </div>
         `;
+        const column = document.getElementById(task.column);
+        if (column)
+        {
+            column.appendChild(taskElement);
+        }
     });
 }
 
