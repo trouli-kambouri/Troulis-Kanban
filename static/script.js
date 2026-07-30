@@ -44,8 +44,6 @@ function renderBoard()
         taskElement.addEventListener("dragstart", drag);
 
         taskElement.innerHTML = `
-            <div class="task-colour"
-                onclick="changeTaskColour(${task.id})"></div>
             <div class="task-content">
                 <span>${task.text}</span>
                 <button class="delete" onclick="deleteTask(${task.id})">×</button>
