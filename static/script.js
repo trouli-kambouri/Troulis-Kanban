@@ -63,12 +63,12 @@ function increaseCounter()
     const counter = tasks.filter(task => task.column === "done").length;
     let text;
     if (counter === 1){
-        text = "You have completed ${counter} task today!";
+        text = `You have completed ${counter} task today!`;
     }
     else {
-        text = "You have completed ${counter} tasks today!";
+        text = `You have completed ${counter} tasks today!`;
     }
-    document.getElementById("counttasks").textContent =`You have completed ${counter} tasks!` = text;
+    document.getElementById("counttasks").textContent = text;
 }
 
 function addTask() 
