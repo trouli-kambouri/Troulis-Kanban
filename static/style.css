@@ -176,7 +176,7 @@ h3
     padding: 0;
     margin-bottom: 12px;
     border-radius: 8px;
-    border: 1px solid rgba(0,0,0,0.2);
+    border: 1px solid #d7a5ff;
     border-left: 16px solid #d7a5ff;
     cursor: move;
     box-shadow: 0 2px 4px rgba(0,0,0,0.3);
