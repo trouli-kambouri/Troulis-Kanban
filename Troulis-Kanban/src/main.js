@@ -1,3 +1,4 @@
+console.log("main.js loaded");
 
 let tasks = [];
 let taskId = 0;
@@ -159,4 +160,11 @@ document.getElementById("addtask").addEventListener("keypress", function(e)
         addTask();
     }
 });
+
+window.addTask = addTask;
+window.deleteTask = deleteTask;
+window.allowDrop = allowDrop;
+window.drag = drag;
+window.drop = drop;
+
 loadTasks();
