@@ -5,12 +5,14 @@ let taskId = 0;
 
 function saveTasks() 
 {
+    console.log("tasks saved");
     localStorage.setItem("kanbanTasks", JSON.stringify(tasks));
     localStorage.setItem("kanbanTaskId", taskId);
 }
 
 function loadTasks() 
 {
+    console.log("tasks loaded");
     const savedTasks = localStorage.getItem("kanbanTasks");
     const savedId = localStorage.getItem("kanbanTaskId");
     if (savedTasks) 
@@ -26,6 +28,7 @@ function loadTasks()
 
 function renderBoard() 
 {
+    console.log("board rendered");
     document.querySelectorAll(".task-list").forEach(column => 
     {
         column.innerHTML = "";
@@ -61,6 +64,7 @@ function renderBoard()
 
 function increaseCounter() 
 {
+    console.log("counter increased");
     const counter = tasks.filter(task => task.column === "done").length;
     let text;
     if (counter === 1){
@@ -74,6 +78,7 @@ function increaseCounter()
 
 function addTask() 
 {
+    console.log("task added");
     const input = document.getElementById("addtask");
     const text = input.value.trim();
 
@@ -92,6 +97,7 @@ function addTask()
 
 function deleteTask(id) 
 {
+    console.log("task deleted");
     tasks = tasks.filter(task => task.id !== id);
     saveTasks();
     renderBoard();
@@ -99,16 +105,19 @@ function deleteTask(id)
 
 function allowDrop(e) 
 {
+    console.log("allow Drop e working");
     e.preventDefault();
 }
 
 function drag(e) 
 {
+    console.log("drag e working");
     e.dataTransfer.setData("text/plain", e.currentTarget.id);
 }
 
 function drop(e) 
 {
+    console.log("drop e working");
     e.preventDefault();
 
     const draggedHtmlId = e.dataTransfer.getData("text/plain");
@@ -161,10 +170,5 @@ document.getElementById("addtask").addEventListener("keypress", function(e)
     }
 });
 
-window.addTask = addTask;
-window.deleteTask = deleteTask;
-window.allowDrop = allowDrop;
-window.drag = drag;
-window.drop = drop;
 
 loadTasks();
