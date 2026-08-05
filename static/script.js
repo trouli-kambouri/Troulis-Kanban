@@ -17,7 +17,6 @@ function loadTasks()
     {
         tasks = JSON.parse(savedTasks);
 
-        // Add countedToday to old tasks that don't have it yet
         tasks.forEach(task => {
             if (task.countedToday === undefined) {
                 task.countedToday = false;
@@ -90,19 +89,14 @@ function addTask()
 {
     const input = document.getElementById("addtask");
     const text = input.value.trim();
-
-    tasks.push({
-    id: taskId++,
-    text: text,
-    column: "todo",
-    countedToday: false
-    });
-
+    
     if (text === "") return;
+
     tasks.push({
         id: taskId++,
         text: text,
         column: "todo",
+        countedToday: false
     });
 
     input.value = "";
@@ -182,6 +176,7 @@ function drop(e)
     saveTasks();
     renderBoard();
 }
+
 document.getElementById("addtask").addEventListener("keypress", function(e) 
 {
     if (e.key === "Enter") 
