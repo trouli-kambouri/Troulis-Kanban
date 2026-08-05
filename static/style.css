@@ -21,7 +21,7 @@ body
 
 h1 
 {
-    font-size: 28px;
+    font-size: 26px;
     text-align: center;
     text-shadow: 1px 1px 2px #d586ff;
     margin-bottom: 20px;
@@ -32,7 +32,7 @@ h1
 
 h2
 {
-    font-size: 22px;
+    font-size: 20px;
     text-align: center;
     text-shadow: 1px 1px 2px #d586ff;
     padding: 24px;
@@ -108,9 +108,9 @@ h3
 .column
 {
     width: 240px;
-    min-height: 360px;
+    min-height: 300px;
     border-radius: 10px;
-    padding: 15px;
+    padding: 30px;
     box-shadow: 0 3px 10px rgba(0,0,0,.2);
 }
 
@@ -136,12 +136,12 @@ h3
 
 .current
 {
-    background: #ffbaea;
+    background: #f9baff;
 }
 
 .current h3
 {
-    background: #ff9edf;
+    background: #ff8be8;
 }
 
 .progress
@@ -176,8 +176,8 @@ h3
     padding: 0;
     margin-bottom: 12px;
     border-radius: 8px;
-    border: 1px solid #d7a5ff;
-    border-left: 16px solid #d7a5ff;
+    border: 1px solid #deb6ff;
+    border-left: 16px solid #deb6ff;
     cursor: move;
     box-shadow: 0 2px 4px rgba(0,0,0,0.3);
     display: flex;
@@ -198,7 +198,7 @@ h3
     display: flex;
     justify-content: space-between;
     align-items: stretch;
-    padding: 12px;
+    padding: 10px;
 }
 
 .task-content span
@@ -211,7 +211,7 @@ h3
 {
     margin-left: 12px;
     flex-shrink: 0;
-    background: #edede1;
+    background: #fffffb;
     color: #0e0e0e;
     border: none;
     width: 25px;
@@ -222,7 +222,7 @@ h3
 
 .delete:hover 
 {
-    background: #d1d1d1;
+    background: #ededed;
 }
 
 .completed span 
