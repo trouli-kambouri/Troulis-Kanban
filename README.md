@@ -9,5 +9,5 @@ The web application is intended to be a functioning Kanban board, with the follo
 - [x] Drag and Drop a Task
 - [x] Grey out and strikethrough Tasks in the "Done" column
 - [x] Saves tasks locally
-- [x] Prints number of tasks done
-- [x] Highscore and reset button
+- [x] Prints number of tasks done daily
+- [x] Highscore and highscore reset button
