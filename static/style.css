@@ -44,7 +44,7 @@ h3
     font-size: 18px;
     text-align: center;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.35);
-    padding: 16px;
+    padding: 20px;
     color: white;
 }
 
@@ -120,7 +120,7 @@ h3
     color: white;
     font-size: 18px;
     padding: 12px;
-    border-radius: 8px;
+    border-radius: 10px;
     margin: -15px -15px 15px -15px;
 }
 
@@ -164,9 +164,10 @@ h3
     background: #7070ff;
 }
 
-.task-list 
-{
-    min-height: 420px;
+.task-list {
+    min-height: 300px;
+    max-height: 350px;
+    overflow-y: auto;
 }
 
 .task 
