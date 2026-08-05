@@ -243,3 +243,49 @@ h3
     font-weight: bold;
     text-shadow: 1px 1px 2px #d586ff;
 }
+
+#resetHighscore {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+
+    background: transparent;
+    border: none;
+
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 11px;
+    font-family: inherit;
+
+    cursor: pointer;
+    padding: 2px 4px;
+
+    transition: color 0.2s ease;
+}
+
+#resetHighscore:hover {
+    color: rgba(255, 255, 255, 1);
+    text-decoration: underline;
+}
+
+Or, if you want it to look like a tiny icon/button:
+
+#resetHighscore {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+
+    width: 20px;
+    height: 20px;
+
+    border: none;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.15);
+    color: white;
+
+    font-size: 12px;
+    cursor: pointer;
+}
+
+#resetHighscore:hover {
+    background: rgba(255,255,255,0.3);
+}

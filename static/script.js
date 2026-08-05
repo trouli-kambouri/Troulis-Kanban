@@ -12,14 +12,29 @@ function loadTasks()
 {
     const savedTasks = localStorage.getItem("kanbanTasks");
     const savedId = localStorage.getItem("kanbanTaskId");
+
     if (savedTasks) 
     {
         tasks = JSON.parse(savedTasks);
+
+        // Add countedToday to old tasks that don't have it yet
+        tasks.forEach(task => {
+            if (task.countedToday === undefined) {
+                task.countedToday = false;
+            }
+        });
     }
+
     if (savedId) 
     {
         taskId = parseInt(savedId);
     }
+
+    const stats = JSON.parse(localStorage.getItem("taskStats"));
+    if (stats) {
+        updateScoreDisplay(stats);
+    }
+
     renderBoard();
 }
 
@@ -76,6 +91,13 @@ function addTask()
     const input = document.getElementById("addtask");
     const text = input.value.trim();
 
+    tasks.push({
+    id: taskId++,
+    text: text,
+    column: "todo",
+    countedToday: false
+    });
+
     if (text === "") return;
     tasks.push({
         id: taskId++,
@@ -127,8 +149,9 @@ function drop(e)
     tasks.splice(oldIndex, 1);
     draggedTask.column = columnId;
 
-    if (previousColumn !== "done" && columnId === "done") {
+    if (columnId === "done" && !draggedTask.countedToday) {
     completeTask();
+    draggedTask.countedToday = true;
     }
 
     const targetTaskElement = e.target.closest(".task");
@@ -168,7 +191,8 @@ document.getElementById("addtask").addEventListener("keypress", function(e)
 });
 loadTasks();
 
-function completeTask() {
+function completeTask() 
+{
     let today = new Date().toISOString().split("T")[0];
 
     let data = JSON.parse(localStorage.getItem("taskStats")) || {
@@ -177,9 +201,16 @@ function completeTask() {
         highscore: 0
     };
 
+    // New day? Reset today's counter and allow every task to count again.
     if (data.date !== today) {
         data.date = today;
         data.todayCompleted = 0;
+
+        tasks.forEach(task => {
+            task.countedToday = false;
+        });
+
+        saveTasks();
     }
 
     data.todayCompleted++;
@@ -196,4 +227,27 @@ function completeTask() {
 function updateScoreDisplay(data) {
     document.getElementById("highscore").innerHTML =
         `Highscore:<br>${data.highscore}`;
+}
+
+function resetHighscore() {
+    if (!confirm("This will reset your highscore! Are you sure?")) {
+        return;
+    }
+
+    const today = new Date().toISOString().split("T")[0];
+
+    const data = {
+        date: today,
+        todayCompleted: 0,
+        highscore: 0
+    };
+
+    localStorage.setItem("taskStats", JSON.stringify(data));
+
+    tasks.forEach(task => {
+        task.countedToday = false;
+    });
+
+    saveTasks();
+    updateScoreDisplay(data);
 }
