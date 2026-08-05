@@ -194,6 +194,6 @@ function completeTask() {
 }
 
 function updateScoreDisplay(data) {
-    document.getElementById("highscore").textContent =
-        `Highscore: ${data.highscore} tasks`;
+    document.getElementById("highscore").innerHTML =
+        `Highscore:<br>${data.highscore}`;
 }
