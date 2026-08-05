@@ -236,12 +236,12 @@ h3
 
 #highscore {
     position: absolute;
-    top: 30px;
-    right: 30px;
+    top: 25px;
+    right: 25px;
 
     color: white;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 18px;
     text-shadow: 1px 1px 2px #d586ff;
 }
 
