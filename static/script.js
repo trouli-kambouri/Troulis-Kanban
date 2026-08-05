@@ -230,7 +230,7 @@ function updateScoreDisplay(data) {
 }
 
 function resetHighscore() {
-    if (!confirm("This will reset your highscore! Are you sure?")) {
+    if (!confirm("This will reset your highscore!")) {
         return;
     }
 
