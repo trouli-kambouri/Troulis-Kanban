@@ -116,6 +116,8 @@ function drop(e)
     const draggedTask = tasks.find(t => t.id === draggedId);
 
     if (!draggedTask) return;
+
+    const previousColumn = draggedTask.column;
     const column = e.target.closest(".task-list");
 
     if (!column) return;
@@ -124,6 +126,11 @@ function drop(e)
     const oldIndex = tasks.findIndex(t => t.id === draggedId);
     tasks.splice(oldIndex, 1);
     draggedTask.column = columnId;
+
+    if (previousColumn !== "done" && columnId === "done") {
+    completeTask();
+    }
+
     const targetTaskElement = e.target.closest(".task");
 
     if (!targetTaskElement) 
@@ -160,3 +167,33 @@ document.getElementById("addtask").addEventListener("keypress", function(e)
     }
 });
 loadTasks();
+
+function completeTask() {
+    let today = new Date().toISOString().split("T")[0];
+
+    let data = JSON.parse(localStorage.getItem("taskStats")) || {
+        date: today,
+        todayCompleted: 0,
+        highscore: 0
+    };
+
+    if (data.date !== today) {
+        data.date = today;
+        data.todayCompleted = 0;
+    }
+
+    data.todayCompleted++;
+
+    if (data.todayCompleted > data.highscore) {
+        data.highscore = data.todayCompleted;
+    }
+
+    localStorage.setItem("taskStats", JSON.stringify(data));
+
+    updateScoreDisplay(data);
+}
+
+function updateScoreDisplay(data) {
+    document.getElementById("highscore").textContent =
+        `Highscore: ${data.highscore} tasks`;
+}
