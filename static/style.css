@@ -15,8 +15,8 @@ body
     background-attachment: fixed;
     background-repeat: no-repeat;
     text-align: center;
-    -webkit-backdrop-filter: blur(3px);
-    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
 }
 
 h1 
@@ -112,6 +112,8 @@ h3
     min-height: 300px;
     border-radius: 10px;
     padding: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
     box-shadow: 0 3px 10px rgba(0,0,0,.2);
 }
 
@@ -179,11 +181,15 @@ h3
     border-radius: 8px;
     border: 1px solid #deb6ff;
     border-left: 16px solid #deb6ff;
-    cursor: move;
+    cursor: grab;
     box-shadow: 0 2px 4px rgba(0,0,0,0.3);
     display: flex;
     align-items: stretch;
     overflow-wrap: break-word; 
+}
+
+.task:active{
+    cursor: grabbing;
 }
 
 .task:hover 
