@@ -83,6 +83,7 @@ function increaseCounter()
         text = `You have completed ${counter} tasks today!`;
     }
     document.getElementById("counttasks").textContent = text;
+    console.log("The 'tasks done' counter increased.")
 }
 
 function addTask() 
@@ -103,6 +104,7 @@ function addTask()
 
     saveTasks();
     renderBoard();
+    console.log("You added a task.")
 }
 
 function deleteTask(id) 
@@ -110,6 +112,7 @@ function deleteTask(id)
     tasks = tasks.filter(task => task.id !== id);
     saveTasks();
     renderBoard();
+    console.log("You deleted a task.")
 }
 
 function allowDrop(e) 
@@ -175,6 +178,7 @@ function drop(e)
     }
     saveTasks();
     renderBoard();
+    console.log("You moved a task.")
 }
 
 document.getElementById("addtask").addEventListener("keypress", function(e) 
@@ -196,7 +200,6 @@ function completeTask()
         highscore: 0
     };
 
-    // New day? Reset today's counter and allow every task to count again.
     if (data.date !== today) {
         data.date = today;
         data.todayCompleted = 0;
@@ -217,6 +220,7 @@ function completeTask()
     localStorage.setItem("taskStats", JSON.stringify(data));
 
     updateScoreDisplay(data);
+    console.log("You completed a task.")
 }
 
 function updateScoreDisplay(data) {
@@ -245,4 +249,5 @@ function resetHighscore() {
 
     saveTasks();
     updateScoreDisplay(data);
+    console.log("You reset your highscore.")
 }
