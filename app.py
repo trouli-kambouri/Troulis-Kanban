@@ -1,4 +1,4 @@
-'''
+
 from flask import Flask, render_template, request, redirect, session, flash
 from lib.database_connection import DatabaseConnection
 from lib.user import User
@@ -40,4 +40,3 @@ def login():
 
 if __name__ == "__main__":
     app.run(port=5001, debug=True)
-'''
